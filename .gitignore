@@ -3,3 +3,7 @@
 ################################################################################
 
 /TESTS/NP.Tests.SimpleStatelessBehaviorTest/obj/Debug
+/TESTS/NP.Tests.SimpleStatelessBehaviorTest/.vs/NP.Tests.SimpleStatelessBehaviorTest/v15
+/NP.Paradigms/obj/Debug
+/NP.Paradigms/bin/Debug
+/TESTS/NP.Tests.SimpleStatelessBehaviorTest/bin/Debug
