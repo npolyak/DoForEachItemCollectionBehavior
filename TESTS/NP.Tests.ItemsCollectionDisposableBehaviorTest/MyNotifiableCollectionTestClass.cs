@@ -4,18 +4,13 @@ using System.ComponentModel;
 using NP.Paradigms;
 using System.Collections.Specialized;
 using NP.Paradigms.Behaviors;
+using System;
 
 namespace NP.Tests.ItemsCollectionDisposableBehaviorTest
 {
     public class MyNotifiableCollectionTestClass
     {
-        DoForEachItemCollectionBehavior<INotifyPropertyChanged>
-            _doForEachItemCollectionBehavior =
-                new DoForEachItemCollectionBehavior<INotifyPropertyChanged>
-                (
-                    item => item.PropertyChanged += Item_PropertyChanged,
-                    item => item.PropertyChanged -= Item_PropertyChanged
-                );
+        IDisposable _disposableBehaviors;
 
         #region TheCollection Property
         private ObservableCollection<MyNotifiablePropsTestClass> _collection;
@@ -32,13 +27,13 @@ namespace NP.Tests.ItemsCollectionDisposableBehaviorTest
                     return;
                 }
 
-                // detach from old collection
-                _doForEachItemCollectionBehavior.Detach(_collection);
-
                 this._collection = value;
 
-                // attach to new collection
-                _doForEachItemCollectionBehavior.Attach(_collection);
+                _disposableBehaviors = _collection.AddBehavior
+                (
+                    item => item.PropertyChanged += Item_PropertyChanged,
+                    item => item.PropertyChanged -= Item_PropertyChanged
+                );
             }
         }
         #endregion
