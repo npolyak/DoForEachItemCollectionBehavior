@@ -86,7 +86,7 @@ namespace NP.Paradigms.Behaviors
             Action<T> onRemove = null
         )
         {
-            IEnumerable<T> collection = previousBehaviors.TheObjectTheBehaviorsAreAttachedTo;
+            IEnumerable<T> collection = previousBehaviors?.TheObjectTheBehaviorsAreAttachedTo;
 
             return collection.AddBehaviorImpl<T>(onAdd, onRemove, previousBehaviors);
         }
