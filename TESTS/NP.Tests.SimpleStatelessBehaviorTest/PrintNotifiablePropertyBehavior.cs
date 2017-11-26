@@ -5,7 +5,8 @@ using System.Reflection;
 
 namespace NP.Tests.SimpleStatelessBehaviorTest
 {
-    public class PrintNotifiablePropertyBehavior : IStatelessBehavior<INotifyPropertyChanged>
+    public class PrintNotifiablePropertyBehavior :
+        IStatelessBehavior<INotifyPropertyChanged>
     {
         private void NotifyiableObject_PropertyChanged
         (
@@ -25,12 +26,14 @@ namespace NP.Tests.SimpleStatelessBehaviorTest
 
         public void Attach(INotifyPropertyChanged notifyiableObject)
         {
-            notifyiableObject.PropertyChanged += NotifyiableObject_PropertyChanged;
+            notifyiableObject.PropertyChanged +=
+                NotifyiableObject_PropertyChanged;
         }
 
         public void Detach(INotifyPropertyChanged notifyiableObject)
         {
-            notifyiableObject.PropertyChanged -= NotifyiableObject_PropertyChanged;
+            notifyiableObject.PropertyChanged -= 
+                NotifyiableObject_PropertyChanged;
         }
     }
 }
