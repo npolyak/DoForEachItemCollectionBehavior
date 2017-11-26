@@ -1,19 +1,12 @@
 ﻿using NP.Paradigms.Behaviors;
 using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Linq;
 using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace NP.Tests.SimpleStatelessBehaviorTest
 {
     public class PrintNotifiablePropertyBehavior : IStatelessBehavior<INotifyPropertyChanged>
     {
-        public static PrintNotifiablePropertyBehavior TheInstance { get; } =
-            new PrintNotifiablePropertyBehavior();
-
         private void NotifyiableObject_PropertyChanged
         (
             object sender, 

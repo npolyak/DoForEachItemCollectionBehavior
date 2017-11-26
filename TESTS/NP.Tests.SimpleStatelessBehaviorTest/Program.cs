@@ -1,10 +1,4 @@
-﻿using NP.Paradigms.Behaviors;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 namespace NP.Tests.SimpleStatelessBehaviorTest
 {
     class Program
@@ -15,7 +9,6 @@ namespace NP.Tests.SimpleStatelessBehaviorTest
 
             PrintNotifiablePropertyBehavior printNotifiablePropertyBehavior = 
                 new PrintNotifiablePropertyBehavior();
-
 
 
             printNotifiablePropertyBehavior.Attach(myTestClass);
