@@ -1,4 +1,5 @@
-﻿using NP.Paradigms.Behaviors;
+﻿using NP.Paradigms;
+using NP.Paradigms.Behaviors;
 using System;
 using System.ComponentModel;
 using System.Reflection;
@@ -14,18 +15,7 @@ namespace NP.Tests.SimpleStatelessBehaviorTest
             PropertyChangedEventArgs e
         )
         {
-            PropertyInfo changedPropertyInfo = 
-                sender
-                    .GetType()
-                    .GetProperty(e.PropertyName);
-
-            object propValue = 
-                changedPropertyInfo?.GetValue(sender);
-
-            Console.WriteLine
-            (
-                e.PropertyName + ": " + propValue?.ToString()
-                );
+            sender.PrintPropValue(e.PropertyName);
         }
 
         public void Attach(INotifyPropertyChanged notifyiableObject)

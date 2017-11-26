@@ -7,3 +7,7 @@
 /NP.Paradigms/obj/Debug
 /NP.Paradigms/bin/Debug
 /TESTS/NP.Tests.SimpleStatelessBehaviorTest/bin/Debug
+/TESTS/NP.Tests.CollectionBehaviorTest/.vs/NP.Tests.CollectionBehaviorTest/v15/Server/sqlite3
+/TESTS/NP.Tests.CollectionBehaviorTest/.vs/NP.Tests.CollectionBehaviorTest/v15
+/TESTS/NP.Tests.CollectionBehaviorTest/obj/Debug
+/TESTS/NP.Tests.CollectionBehaviorTest/bin/Debug
