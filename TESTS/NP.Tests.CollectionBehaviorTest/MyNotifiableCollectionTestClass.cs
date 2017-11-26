@@ -4,7 +4,7 @@ using System.ComponentModel;
 using NP.Paradigms;
 using System.Collections.Specialized;
 
-namespace NP.Tests.CollectionBehaviorTest
+namespace NP.Tests.ItemsCollectionTest
 {
     public class MyNotifiableCollectionTestClass 
     {
