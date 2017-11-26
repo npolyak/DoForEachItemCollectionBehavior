@@ -5,7 +5,7 @@ namespace NP.Tests.SimpleStatelessBehaviorTest
     {
         static void Main(string[] args)
         {
-            MyTestClass myTestClass = new MyTestClass();
+            MyNotifiablePropsTestClass myTestClass = new MyNotifiablePropsTestClass();
 
             PrintNotifiablePropertyBehavior printNotifiablePropertyBehavior = 
                 new PrintNotifiablePropertyBehavior();

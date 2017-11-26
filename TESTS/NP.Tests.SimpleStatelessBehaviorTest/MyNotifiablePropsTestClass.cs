@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace NP.Tests.SimpleStatelessBehaviorTest
 {
-    public class MyTestClass : INotifyPropertyChanged
+    public class MyNotifiablePropsTestClass : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
 
