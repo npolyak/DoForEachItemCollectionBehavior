@@ -5,7 +5,7 @@ using NP.Paradigms;
 using System.Collections.Specialized;
 using NP.Paradigms.Behaviors;
 
-namespace NP.Tests.ItemsCollectionBehaviorTest
+namespace NP.Tests.ItemsCollectionTest
 {
     public class MyNotifiableCollectionTestClass
     {

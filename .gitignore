@@ -21,3 +21,8 @@
 /TESTS/NP.Tests.ItemsCollectionBehaviorTest/bin/Debug
 /TESTS/NP.Tests.ItemsCollectionBehaviorTest/obj/Debug
 *.suo
+/TESTS/NP.Tests.ItemsCollectionDisposableBehaviorTest/.vs/NP.Tests.CollectionBehaviorTest/v15/Server/sqlite3
+/TESTS/NP.Tests.ItemsCollectionDisposableBehaviorTest/.vs/NP.Tests.ItemsCollectionBehaviorTest/v15/Server/sqlite3
+/TESTS/NP.Tests.ItemsCollectionDisposableBehaviorTest/.vs/NP.Tests.ItemsCollectionTest/v15/Server/sqlite3
+/TESTS/NP.Tests.ItemsCollectionDisposableBehaviorTest/bin/Debug
+/TESTS/NP.Tests.ItemsCollectionDisposableBehaviorTest/obj/Debug

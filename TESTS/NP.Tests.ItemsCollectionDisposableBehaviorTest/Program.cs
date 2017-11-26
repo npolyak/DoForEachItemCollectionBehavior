@@ -1,7 +1,7 @@
 ﻿
 using System.Collections.ObjectModel;
 
-namespace NP.Tests.ItemsCollectionBehaviorTest
+namespace NP.Tests.ItemsCollectionTest
 {
     class Program
     {
