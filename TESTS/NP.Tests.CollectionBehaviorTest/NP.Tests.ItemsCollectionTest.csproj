@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{D037480E-F985-4C5A-A22E-4FBDD42023A3}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>NP.Tests.CollectionBehaviorTest</RootNamespace>
-    <AssemblyName>NP.Tests.CollectionBehaviorTest</AssemblyName>
+    <RootNamespace>NP.Tests.ItemsCollectionTest</RootNamespace>
+    <AssemblyName>NP.Tests.ItemsCollectionTest</AssemblyName>
     <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
