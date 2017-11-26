@@ -29,6 +29,7 @@ namespace NP.Tests.ItemsCollectionDisposableBehaviorTest
 
                 this._collection = value;
 
+                _disposableBehaviors?.Dispose();
                 _disposableBehaviors = _collection.AddBehavior
                 (
                     item => item.PropertyChanged += Item_PropertyChanged,
