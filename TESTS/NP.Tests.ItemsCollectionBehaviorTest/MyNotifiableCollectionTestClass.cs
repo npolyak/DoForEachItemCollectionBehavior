@@ -7,10 +7,10 @@ using NP.Paradigms.Behaviors;
 
 namespace NP.Tests.ItemsCollectionTest
 {
-    public class MyNotifiableCollectionTestClass 
+    public class MyNotifiableCollectionTestClass
     {
         DoForEachItemCollectionBehavior<INotifyPropertyChanged>
-            _doForEachItemCollectionBehavior = 
+            _doForEachItemCollectionBehavior =
                 new DoForEachItemCollectionBehavior<INotifyPropertyChanged>
                 (
                     item => item.PropertyChanged += Item_PropertyChanged,
@@ -41,7 +41,7 @@ namespace NP.Tests.ItemsCollectionTest
                 _doForEachItemCollectionBehavior.Attach(_collection);
             }
         }
-
+        #endregion
 
         private static void Item_PropertyChanged(object sender, PropertyChangedEventArgs e)
         {
