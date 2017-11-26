@@ -66,7 +66,7 @@ namespace NP.Tests.ItemsCollectionTest
         }
         #endregion TheCollection Property
 
-        // removes the property changed handler from all
+        // removes the PropertyChanged handler from all
         // old items
         void UnsetItems(IEnumerable items)
         {
