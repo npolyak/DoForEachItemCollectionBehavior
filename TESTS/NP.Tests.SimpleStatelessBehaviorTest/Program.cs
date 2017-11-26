@@ -13,12 +13,17 @@ namespace NP.Tests.SimpleStatelessBehaviorTest
         {
             MyTestClass myTestClass = new MyTestClass();
 
-            PrintNotifiablePropertyBehavior.TheInstance.Attach(myTestClass);
+            PrintNotifiablePropertyBehavior printNotifiablePropertyBehavior = 
+                new PrintNotifiablePropertyBehavior();
+
+
+
+            printNotifiablePropertyBehavior.Attach(myTestClass);
 
             // should print (since Behavior is attached)
             myTestClass.TheString = "Hello World";
 
-            PrintNotifiablePropertyBehavior.TheInstance.Detach(myTestClass);
+            printNotifiablePropertyBehavior.Detach(myTestClass);
 
             // should not print (since Behavior is detached);
             myTestClass.TheString = "Bye World";

@@ -10,9 +10,6 @@ namespace NP.Paradigms.Behaviors
 {
     public class PrintNotifiablePropertyBehavior : IStatelessBehavior<INotifyPropertyChanged>
     {
-        public static PrintNotifiablePropertyBehavior TheInstance { get; } =
-            new PrintNotifiablePropertyBehavior();
-
         private void NotifyiableObject_PropertyChanged
         (
             object sender, 

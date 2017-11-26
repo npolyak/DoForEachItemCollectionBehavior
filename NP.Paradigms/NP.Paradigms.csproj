@@ -40,8 +40,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Behaviors\BehaviorDisposable.cs" />
+    <Compile Include="Behaviors\DisposableBehaviorContainer.cs" />
+    <Compile Include="Behaviors\DoForEachItemCollectionBehavior.cs" />
+    <Compile Include="Behaviors\ForEachItemCollectionBehaviorBase.cs" />
     <Compile Include="Behaviors\IStatelessBehavior.cs" />
-    <Compile Include="Behaviors\PrintNotifiablePropertyBehavior.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
