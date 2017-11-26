@@ -3,11 +3,20 @@ using System.Collections.ObjectModel;
 using System.ComponentModel;
 using NP.Paradigms;
 using System.Collections.Specialized;
+using NP.Paradigms.Behaviors;
 
 namespace NP.Tests.ItemsCollectionTest
 {
     public class MyNotifiableCollectionTestClass 
     {
+        DoForEachItemCollectionBehavior<INotifyPropertyChanged>
+            _doForEachItemCollectionBehavior = 
+                new DoForEachItemCollectionBehavior<INotifyPropertyChanged>
+                (
+                    item => item.PropertyChanged += Item_PropertyChanged,
+                    item => item.PropertyChanged -= Item_PropertyChanged
+                );
+
         #region TheCollection Property
         private ObservableCollection<MyNotifiablePropsTestClass> _collection;
         public ObservableCollection<MyNotifiablePropsTestClass> TheCollection
@@ -23,77 +32,18 @@ namespace NP.Tests.ItemsCollectionTest
                     return;
                 }
 
-                if (_collection != null)
-                {
-                    // remove the handler
-                    // from the old collection
-                    _collection.CollectionChanged -=
-                        _collection_CollectionChanged;
-                }
-
-                // remove handlers from items 
-                // in the old collection
-                UnsetItems(this._collection);
+                // detach from old collection
+                _doForEachItemCollectionBehavior.Detach(_collection);
 
                 this._collection = value;
 
-                // add handlers to the items 
-                // in the new collection
-                SetItems(this._collection);
-
-                if (_collection != null)
-                {
-                    // watch for the new collection change
-                    // to set the added and unset
-                    // the removed items
-                    _collection.CollectionChanged +=
-                        _collection_CollectionChanged;
-                }
-            }
-        }
-
-        private void _collection_CollectionChanged
-        (
-            object sender, 
-            NotifyCollectionChangedEventArgs e
-        )
-        {
-            // remove handlers from the old items
-            UnsetItems(e.OldItems);
-
-            // add handlers to all new items
-            SetItems(e.NewItems);
-        }
-        #endregion TheCollection Property
-
-        // removes the property changed handler from all
-        // old items
-        void UnsetItems(IEnumerable items)
-        {
-            if (items == null)
-                return;
-
-            foreach (MyNotifiablePropsTestClass item in items)
-            {
-                item.PropertyChanged -= Item_PropertyChanged;
-            }
-        }
-
-        // attached the PropertyChanged handler to all 
-        // new items
-        void SetItems(IEnumerable items)
-        {
-            if (items == null)
-                return;
-
-            foreach(MyNotifiablePropsTestClass item in items)
-            {
-                item.PropertyChanged += Item_PropertyChanged;
+                // attach to new collection
+                _doForEachItemCollectionBehavior.Attach(_collection);
             }
         }
 
 
-        private void Item_PropertyChanged(object sender, PropertyChangedEventArgs e)
+        private static void Item_PropertyChanged(object sender, PropertyChangedEventArgs e)
         {
             // prints the property name and value to console
             sender.PrintPropValue(e.PropertyName);

@@ -9,7 +9,7 @@ namespace NP.Tests.SingleItemBehaviorTest
     public class PrintNotifiablePropertyBehavior :
         IStatelessBehavior<INotifyPropertyChanged>
     {
-        private void NotifyiableObject_PropertyChanged
+        private static void NotifyiableObject_PropertyChanged
         (
             object sender, 
             PropertyChangedEventArgs e
