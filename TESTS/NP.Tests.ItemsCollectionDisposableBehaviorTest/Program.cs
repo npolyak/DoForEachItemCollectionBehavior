@@ -12,6 +12,7 @@ namespace NP.Tests.ItemsCollectionDisposableBehaviorTest
 
             MyNotifiablePropsTestClass item1 = new MyNotifiablePropsTestClass();
 
+            // create collection containing item1.
             collectionTestClass.TheCollection = 
                 new ObservableCollection<MyNotifiablePropsTestClass>
                 (
