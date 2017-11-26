@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NP.Tests.ItemsCollectionTest
+namespace NP.Tests.ItemsCollectionDisposableBehaviorTest
 {
     public class MyNotifiablePropsTestClass : INotifyPropertyChanged
     {

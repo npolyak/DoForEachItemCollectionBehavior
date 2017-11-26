@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("NP.Tests.ItemsCollectionTest")]
+[assembly: AssemblyTitle("NP.Tests.ItemsCollectionDisposableBehaviorTest")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("NP.Tests.ItemsCollectionTest")]
+[assembly: AssemblyProduct("NP.Tests.ItemsCollectionDisposableBehaviorTest")]
 [assembly: AssemblyCopyright("Copyright ©  2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
