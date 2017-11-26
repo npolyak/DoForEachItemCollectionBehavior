@@ -32,3 +32,5 @@
 *.ide-wal
 /TESTS/NP.Tests.ItemsCollectionDisposableBehaviorWithChainingTest/bin/Debug
 /TESTS/NP.Tests.ItemsCollectionDisposableBehaviorWithChainingTest/obj/Debug
+/TESTS/NP.Tests.SingleItemBehaviorTest/bin/Debug
+/TESTS/NP.Tests.SingleItemBehaviorTest/obj/Debug
