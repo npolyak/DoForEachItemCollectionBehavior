@@ -4,7 +4,7 @@ using System;
 using System.ComponentModel;
 using System.Reflection;
 
-namespace NP.Tests.SimpleStatelessBehaviorTest
+namespace NP.Tests.SingleItemBehaviorTest
 {
     public class PrintNotifiablePropertyBehavior :
         IStatelessBehavior<INotifyPropertyChanged>

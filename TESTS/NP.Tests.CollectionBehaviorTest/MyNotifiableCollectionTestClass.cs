@@ -25,18 +25,27 @@ namespace NP.Tests.CollectionBehaviorTest
 
                 if (_collection != null)
                 {
+                    // remove the handler
+                    // from the old collection
                     _collection.CollectionChanged -=
                         _collection_CollectionChanged;
                 }
 
+                // remove handlers from items 
+                // in the old collection
                 UnsetItems(this._collection);
 
                 this._collection = value;
 
+                // add handlers to the items 
+                // in the new collection
                 SetItems(this._collection);
 
                 if (_collection != null)
                 {
+                    // watch for the new collection change
+                    // to set the added and unset
+                    // the removed items
                     _collection.CollectionChanged +=
                         _collection_CollectionChanged;
                 }
@@ -49,11 +58,16 @@ namespace NP.Tests.CollectionBehaviorTest
             NotifyCollectionChangedEventArgs e
         )
         {
+            // remove handlers from the old items
             UnsetItems(e.OldItems);
+
+            // add handlers to all new items
             SetItems(e.NewItems);
         }
         #endregion TheCollection Property
 
+        // removes the property changed handler from all
+        // old items
         void UnsetItems(IEnumerable items)
         {
             if (items == null)
@@ -65,6 +79,8 @@ namespace NP.Tests.CollectionBehaviorTest
             }
         }
 
+        // attached the PropertyChanged handler to all 
+        // new items
         void SetItems(IEnumerable items)
         {
             if (items == null)
@@ -76,8 +92,10 @@ namespace NP.Tests.CollectionBehaviorTest
             }
         }
 
+
         private void Item_PropertyChanged(object sender, PropertyChangedEventArgs e)
         {
+            // prints the property name and value to console
             sender.PrintPropValue(e.PropertyName);
         }
     }

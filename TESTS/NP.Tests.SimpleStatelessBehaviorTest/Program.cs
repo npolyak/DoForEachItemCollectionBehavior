@@ -1,5 +1,5 @@
 ﻿
-namespace NP.Tests.SimpleStatelessBehaviorTest
+namespace NP.Tests.SingleItemBehaviorTest
 {
     class Program
     {
