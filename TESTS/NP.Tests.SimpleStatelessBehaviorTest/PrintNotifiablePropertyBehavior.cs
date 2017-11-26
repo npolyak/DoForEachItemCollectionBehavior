@@ -19,9 +19,13 @@ namespace NP.Tests.SimpleStatelessBehaviorTest
                     .GetType()
                     .GetProperty(e.PropertyName);
 
-            object propValue = changedPropertyInfo?.GetValue(sender);
+            object propValue = 
+                changedPropertyInfo?.GetValue(sender);
 
-            Console.WriteLine(e.PropertyName + ": " + propValue?.ToString());
+            Console.WriteLine
+            (
+                e.PropertyName + ": " + propValue?.ToString()
+                );
         }
 
         public void Attach(INotifyPropertyChanged notifyiableObject)
