@@ -26,8 +26,8 @@ namespace NP.Tests.ItemsCollectionDisposableChainedBehaviorTest
 
             // create the handler for event fired when TheCollection
             // property is assigned a new value
-            collectionTestClass.TheCollectionChangedEvent += 
-                CollectionTestClass_TheCollectionChangedEvent;
+            collectionTestClass.TheCollectionValueChangedEvent +=
+                CollectionTestClass_TheCollectionValueChangedEvent;
 
             // create item 1.
             MyNotifiablePropsTestClass item1 = new MyNotifiablePropsTestClass();
@@ -75,7 +75,7 @@ namespace NP.Tests.ItemsCollectionDisposableChainedBehaviorTest
         }
 
         static IDisposable _disposableBehaviors = null;
-        private static void CollectionTestClass_TheCollectionChangedEvent
+        private static void CollectionTestClass_TheCollectionValueChangedEvent
         (
             ObservableCollection<MyNotifiablePropsTestClass> collection
         )

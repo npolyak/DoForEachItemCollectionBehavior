@@ -21,9 +21,7 @@ namespace NP.Tests.ItemsCollectionDisposableChainedBehaviorTest
     public class MyNotifiableCollectionTestClass
     {
         public event Action<ObservableCollection<MyNotifiablePropsTestClass>> 
-            TheCollectionChangedEvent = null;
-
-        IDisposable _disposableBehaviors;
+            TheCollectionValueChangedEvent = null;
 
         #region TheCollection Property
         private ObservableCollection<MyNotifiablePropsTestClass> _collection;
@@ -42,15 +40,10 @@ namespace NP.Tests.ItemsCollectionDisposableChainedBehaviorTest
 
                 this._collection = value;
 
-                TheCollectionChangedEvent?.Invoke(_collection);
+                // fire collection changed event:
+                TheCollectionValueChangedEvent?.Invoke(_collection);
             }
         }
         #endregion
-
-        private static void Item_PropertyChanged(object sender, PropertyChangedEventArgs e)
-        {
-            // prints the property name and value to console
-            sender.PrintPropValue(e.PropertyName);
-        }
     }
 }
