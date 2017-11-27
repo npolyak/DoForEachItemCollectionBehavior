@@ -10,6 +10,9 @@ namespace NP.Tests.ItemsCollectionDisposableBehaviorTest
 {
     public class MyNotifiableCollectionTestClass
     {
+        // Contains the disposable token.
+        // Calling its Dispose() method will 
+        // Detach all the behaviors from the collection
         IDisposable _disposableBehaviors;
 
         #region TheCollection Property
@@ -29,7 +32,8 @@ namespace NP.Tests.ItemsCollectionDisposableBehaviorTest
 
                 this._collection = value;
 
-                _disposableBehaviors?.Dispose();
+
+                _disposableBehaviors?.Dispose(); // detaches old behaviors
                 _disposableBehaviors = _collection.AddBehavior
                 (
                     item => item.PropertyChanged += Item_PropertyChanged,

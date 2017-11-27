@@ -9,7 +9,7 @@ namespace NP.Tests.ItemsCollectionBehaviorTest
 {
     public class MyNotifiableCollectionTestClass
     {
-        // define the behavior.
+        // define and create the behavior.
         DoForEachItemCollectionBehavior<INotifyPropertyChanged>
             _doForEachItemCollectionBehavior =
                 new DoForEachItemCollectionBehavior<INotifyPropertyChanged>
