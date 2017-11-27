@@ -16,7 +16,7 @@ using System.ComponentModel;
 
 namespace NP.Tests.ItemsCollectionDisposableChainedBehaviorTest
 {
-    class Program
+    static class Program
     {
         static void Main(string[] args)
         {            
@@ -82,6 +82,10 @@ namespace NP.Tests.ItemsCollectionDisposableChainedBehaviorTest
         {
             _disposableBehaviors?.Dispose();
 
+            // chain the two behaviors - one to record the 
+            // changed property value, the other to maintain
+            // NumberItemsInCollection of the same size as 
+            // the collection.
             _disposableBehaviors = collection
                 .AddBehavior
                 (
@@ -109,6 +113,7 @@ namespace NP.Tests.ItemsCollectionDisposableChainedBehaviorTest
 
                 _numberItemsInCollection = value;
 
+                // write the changed property to console
                 Console.WriteLine($"Number items in collection: {_numberItemsInCollection}");
             }
         }
